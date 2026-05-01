@@ -110,7 +110,18 @@ npm run dev -w frontend
 
 ## 5. Configuration (environment variables)
 
-Set these **before** `npm run dev` / `npm run start` **for the backend** (`backend` workspace), or export them in your shell.
+These variables apply to the **backend adapter**. Easiest workflow:
+
+```bash
+cp backend/.env.example backend/.env
+# Edit backend/.env (values are documented in that file).
+```
+
+When you run `npm run dev` or `npm start` against the **`backend`** workspace, the adapter loads **`backend/.env`** automatically (via [dotenv](https://www.npmjs.com/package/dotenv)).
+
+You can instead **export variables in your shell** if you prefer not to use a file.
+
+<!-- Keep table below in sync with `backend/.env.example`. -->
 
 ### Core
 
